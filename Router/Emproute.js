@@ -1,0 +1,10 @@
+const express = require('express')
+const routes = express.Router()
+const Empcontroller = require('../Controller/Empcontroller')
+routes.post('/emppost',Empcontroller.Empcreate)
+routes.get('/allemp',Empcontroller.Allempget)
+routes.get('/empid/:_id',Empcontroller.Empgetid)
+routes.put('/empedit/:_id',Empcontroller.Empupdate)
+routes.delete('/empdelete/:_id',Empcontroller.Empdelete)
+routes.post('/emplogin/',Empcontroller.Emplogin)
+module.exports = routes
