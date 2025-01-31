@@ -1,5 +1,7 @@
-const { default: mongoose } = require('mongoose')
+
 const EmpModel = require('../Model/Employeemodel')
+
+//Empcreate
 
 const Empcreate = async(req,res)=>{
     try {
@@ -16,6 +18,8 @@ const Empcreate = async(req,res)=>{
     }
 }
 
+//Allemp
+
 const Allempget = async (req,res)=>{
     try {
         const getemp = await EmpModel.find(req.body)
@@ -24,6 +28,8 @@ const Allempget = async (req,res)=>{
         res.status(500).json({error:error.message})
     }
 }
+
+//Empgetbyid
 
 const Empgetid = async(req,res)=>{
     try {
@@ -36,6 +42,9 @@ const Empgetid = async(req,res)=>{
        res.status(500).json({error:error.message}) 
     }
 }
+
+//Empupdate
+
 
 const Empupdate = async(req,res)=>{
     try {
@@ -51,6 +60,9 @@ const Empupdate = async(req,res)=>{
     }
 }
 
+
+//EmpDelete
+
 const Empdelete = async(req,res)=>{
     try {
         const empdelete = await EmpModel.findByIdAndDelete(req.params._id)
@@ -63,6 +75,9 @@ const Empdelete = async(req,res)=>{
         res.status(500).json({error:error.message})
     }
 }
+  
+
+//EmpLogin
 
 const Emplogin = async(req,res)=>{
     try {
