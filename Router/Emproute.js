@@ -6,5 +6,5 @@ routes.get('/allemp',Empcontroller.Allempget)
 routes.get('/empid/:_id',Empcontroller.Empgetid)
 routes.put('/empedit/:_id',Empcontroller.Empupdate)
 routes.delete('/empdelete/:_id',Empcontroller.Empdelete)
-routes.post('/emplogin/',Empcontroller.Emplogin)
+routes.post('/emplogin',Empcontroller.Emplogin)
 module.exports = routes
